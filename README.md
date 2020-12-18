@@ -19,4 +19,4 @@ Install a [Nerd font](https://github.com/ryanoasis/nerd-fonts) for better usage 
 ## neofetch
 Place all the contents in ~/.config/neofetch
 
-Edit your shell config file (bash: <code>~/.bashrc</code> zsh: <code>~/.zshrc</code> fish:<code>~/.config/fish/config.fish</code>) and add <code>neofetch --source .config/neofetch/ascii-art.txt</code>
+Edit your shell config file (bash: <code> ~/.bashrc</code> zsh: <code> ~/.zshrc</code> fish:<code>~/.config/fish/config.fish</code>) and add <code>neofetch --source .config/neofetch/ascii-art.txt</code>
