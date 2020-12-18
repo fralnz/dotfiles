@@ -20,6 +20,14 @@ super + F3
 super + F2
   kmix
 
+# file manager: dolphin
+super + d
+  dolphin
+
+# lutris
+super + l
+  lutris
+
 # terminal emulator
 super + Return
   alacritty
@@ -41,8 +49,8 @@ control + alt + r
   reboot
 
 
-super + button1
-	BUTTON=1 RADIUS=200 drag.sh
+super + button1 + drag
+  bspc node -t floating
 
 
 
@@ -172,7 +180,7 @@ ctrl + shift + Escape
 
 #screeenshooter
 Print
-     xfce4-screenshooter
+     spectacle
 
 #Gnome-Screenshot
 ctrl + shift + Print
