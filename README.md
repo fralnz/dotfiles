@@ -3,9 +3,8 @@ My dotfiles
 
 
 
-# nvim
+## nvim
 
-## install
 Place the contents of this folder in ~/.config/nvim/
 
 Install [vim-plug](https://github.com/junegunn/vim-plug)
