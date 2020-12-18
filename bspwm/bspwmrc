@@ -20,8 +20,8 @@ bspc config pointer_action1 none
 #BSPWM configuration
 #bspc config border_radius       8
 bspc config border_width         2
-bspc config window_gap           10
-bspc config top_padding          30
+bspc config window_gap           2
+bspc config top_padding          40
 bspc config bottom_padding       10
 bspc config left_padding         10
 bspc config right_padding        10
@@ -65,6 +65,7 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 bspc rule -a inkscape state=fullscreen
 bspc rule -a Spotify state=fullscreen
 bspc rule -a Vlc state=fullscreen
+bspc rule -a emacs state=fullscreen
 bspc rule -a VirtualBox Manager state=fullscreen
 bspc rule -a VirtualBox Machine state=fullscreen
 #bspc rule -a Gimp state=fullscreen
