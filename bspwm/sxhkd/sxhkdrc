@@ -6,7 +6,11 @@
 
 # firefox
 super + F1
-  firefox
+  firefox-developer-edition
+
+# firefox (incognito)
+super + alt + F1
+  firefox-developer-edition --args -private-window
 
 # spotify
 super + F2
@@ -37,8 +41,24 @@ super + x
   arcolinux-logout
 
 # program launcher
+
+# ---ROFI---
+
+# Rofi
 super + @space
   rofi -show drun
+
+# Emoji
+super + shift + @space
+  rofi -show emoji
+
+# Twitch
+super + alt + @space
+  kpl
+
+# Twitch
+super + @space + t
+  rofi -show twitch
 
 # xkill
 super + shift + x
