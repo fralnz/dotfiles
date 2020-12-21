@@ -7,26 +7,28 @@ My dotfiles
 ## Alacritty
 
 Place all the contents of the alacritty folder into *~/.config/alacritty/*
-
 Dependency: [SauceCodePro NerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip)
 
 ## bspwm
 
-Place all the contents of the bspwm folder into *~/.config/bspwm/*
+### Installation
 
+Place all the contents of the bspwm folder into *~/.config/bspwm/*
 <code>cd ~/.config/bspwm && chmod +x bspwmrc && chmod +x autostart.sh && chmod +x sxhkd/sxhkdrc</code>
+
+### Dependencies
+
+#### Rofi
+
+Arch: yay -S rofi-emoji kappa-launcher-git
+
+git: [kappa-launcher]([GitHub - jp1995/kappa-launcher: Twitch launcher using Rofi](https://github.com/jp1995/kappa-launcher)), [rofi-emoji]([GitHub - Mange/rofi-emoji: Emoji selector plugin for Rofi](https://github.com/Mange/rofi-emoji))
 
 ## nvim
 
 Place the contents of this folder in ~/.config/nvim/
-
-
 Install [vim-plug](https://github.com/junegunn/vim-plug)
-
-
 Open nvim and <code>:PlugInstall</code>
-
-
 Install a [Nerd font](https://github.com/ryanoasis/nerd-fonts) for better usage (EX: [SauceCodePro NerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip))
 
 ## neofetch
