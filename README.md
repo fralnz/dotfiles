@@ -20,7 +20,7 @@ Place all the contents of the bspwm folder into *~/.config/bspwm/*
 
 #### Rofi
 
-Arch: yay -S rofi-emoji kappa-launcher-git
+Arch: <code>yay -S rofi-emoji kappa-launcher-git</code>
 
 git: [kappa-launcher](https://github.com/jp1995/kappa-launcher), [rofi-emoji](https://github.com/Mange/rofi-emoji)
 
