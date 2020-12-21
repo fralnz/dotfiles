@@ -22,7 +22,7 @@ Place all the contents of the bspwm folder into *~/.config/bspwm/*
 
 Arch: yay -S rofi-emoji kappa-launcher-git
 
-git: [kappa-launcher]([GitHub - jp1995/kappa-launcher: Twitch launcher using Rofi](https://github.com/jp1995/kappa-launcher)), [rofi-emoji]([GitHub - Mange/rofi-emoji: Emoji selector plugin for Rofi](https://github.com/Mange/rofi-emoji))
+git: [kappa-launcher](https://github.com/jp1995/kappa-launcher), [rofi-emoji](https://github.com/Mange/rofi-emoji)
 
 ## nvim
 
