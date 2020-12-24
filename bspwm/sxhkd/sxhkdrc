@@ -28,9 +28,17 @@ super + F2
 super + d
   dolphin
 
+# file manager: spacefm
+super + s
+  spacefm
+
 # lutris
 super + l
   lutris
+
+# steam
+super + F4
+  steam
 
 # terminal emulator
 super + Return
@@ -107,7 +115,7 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+super + shift + {t,alt + t,s,f}
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
