@@ -1,26 +1,10 @@
 set previewer ~/.config/lf/preview
 set preview true
 set hidden true
-set color256 true
 set drawbox true
 set icons true
 set ignorecase true
 set shell sh
-
-# set '-eu' options for shell commands
-# These options are used to have safer shell commands. Option '-e' is used to
-# exit on error and option '-u' is used to give error for unset variables.
-# Option '-f' disables pathname expansion which can be useful when $f, $fs, and
-# $fx variables contain names with '*' or '?' characters. However, this option
-# is used selectively within individual commands as it can be limiting at
-# times.
-set shellopts '-eu'
-set icons true
-# set internal field separator (IFS) to "\n" for shell commands
-# This is useful to automatically split file names in $fs and $fx properly
-# since default file separator used in these variables (i.e. 'filesep' option)
-# is newline. You need to consider the values of these options and create your
-# commands accordingly.
 set ifs "\n"
 
 # leave some space at the top and the bottom of the screen
@@ -49,11 +33,20 @@ map O $mimeopen --ask $f
 # Clear maps
 map d
 map c
+map m
+map e
+map o
 
 # cut, copy, paste...
-map             cc clear
-map             cy cut
+map cc          clear
+map cy          cut
 map <delete>    delete
+map go          go
+map md          mkdir
+map mf          mkfile
+map gimp        gimp
+map exe         exe
+map ow          openwith
 
 # bookmarks for directories
 map dh  cd
@@ -112,24 +105,23 @@ cmd mkfile ${{
 cmd go ${{
   echo "Directory: "
   read ans
-  cd ans
+  cd $ans
 }}
 
-# define a custom 'delete' command
-# cmd delete ${{
-#     set -f
-#     printf "$fx\n"
-#     printf "delete?[y/n]"
-#     read ans
-#     [ $ans = "y" ] && rm -rf $fx
-# }}
+cmd gimp ${{
+  devour gimp "$f"
+}}
 
-# use '<delete>' key for either 'trash' or 'delete' command
-# map <delete> trash
-# map <delete> delete
+cmd exe ${{
+  chmod +x "$f"
+}}
 
-# extract the current file with the right command
-# (xkcd link: https://xkcd.com/1168/)
+cmd openwith ${{
+  echo "Open with: "
+  read ans
+  $ans "$f"
+}}
+
 cmd extract ${{
     set -f
     case $f in
