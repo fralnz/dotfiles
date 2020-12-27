@@ -41,12 +41,15 @@ map o
 map cc          clear
 map cy          cut
 map <delete>    delete
-map go          go
+map br          broot_jump
 map md          mkdir
 map mf          mkfile
 map gimp        gimp
 map exe         exe
 map ow          openwith
+map go          go
+map cm          chmod
+
 
 # bookmarks for directories
 map dh  cd
@@ -89,13 +92,13 @@ cmd chmod ${{
     chmod $ans $file
   done
 
-cmd mkdir ${{
+cmd mkdir %{{
   printf "Directory Name: "
   read ans
   mkdir $ans
 }}
 
-cmd mkfile ${{
+cmd mkfile %{{
   printf "File Name: "
   read ans
   $EDITOR $ans
@@ -112,18 +115,39 @@ cmd gimp ${{
   devour gimp "$f"
 }}
 
-cmd exe ${{
+cmd exe %{{
   chmod +x "$f"
 }}
 
 cmd openwith %{{
   echo "Open with: "
   read ans
-  $ans "$f"
+  $ans "$f" > /dev/null 2>&1
 }}
 
+cmd broot_jump ${{
+  f=$(mktemp)
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
+  rm -f "$f"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
 
+cmd chmod %{{
+  printf "Mode Bits: "
+  read ans
 
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
 
 cmd extract ${{
     set -f
