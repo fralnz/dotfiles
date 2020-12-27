@@ -116,11 +116,14 @@ cmd exe ${{
   chmod +x "$f"
 }}
 
-cmd openwith ${{
+cmd openwith %{{
   echo "Open with: "
   read ans
   $ans "$f"
 }}
+
+
+
 
 cmd extract ${{
     set -f
