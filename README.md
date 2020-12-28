@@ -14,6 +14,7 @@ Dependency: [SauceCodePro NerdFont](https://github.com/ryanoasis/nerd-fonts/rele
 ### Installation
 
 Place all the contents of the bspwm folder into *~/.config/bspwm/*
+
 <code>cd ~/.config/bspwm && chmod +x bspwmrc && chmod +x autostart.sh && chmod +x sxhkd/sxhkdrc</code>
 
 ### Dependencies
