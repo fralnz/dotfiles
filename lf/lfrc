@@ -38,18 +38,31 @@ map e
 map o
 
 # cut, copy, paste...
+map y           copy
 map cc          clear
 map cy          cut
-map <delete>    delete
+map code        code
+map <delete>    trash
 map br          broot_jump
 map md          mkdir
 map mf          mkfile
 map gimp        gimp
-map exe         exe
+map exe         mkexe
 map ow          openwith
-map go          go
+map go          fasd_dir
 map cm          chmod
+map u           $view "$f"
+map .           set hidden!
+map <enter>     open
+map sh          shell
 
+# dragon
+map dr dragon
+map ds dragon-stay
+map di dragon-individual
+map dm mvdragon
+map dc cpdragon
+map dl dlfile
 
 # bookmarks for directories
 map dh  cd
@@ -115,8 +128,25 @@ cmd gimp ${{
   devour gimp "$f"
 }}
 
-cmd exe %{{
+cmd mkexe %{{
   chmod +x "$f"
+}}
+
+cmd paste &{{
+    load=$(lf -remote 'load')
+    mode=$(echo "$load" | sed -n '1p')
+    list=$(echo "$load" | sed '1d')
+    if [ $mode = 'copy' ]; then
+        rsync -av --ignore-existing --progress $list . \
+        | stdbuf -i0 -o0 -e0 tr '\r' '\n' \
+        | while read line; do
+            lf -remote "send $id echo $line"
+        done
+    elif [ $mode = 'move' ]; then
+        mv -n $list .
+    fi
+    lf -remote 'send load'
+    lf -remote 'send clear'
 }}
 
 cmd openwith %{{
@@ -124,6 +154,26 @@ cmd openwith %{{
   read ans
   $ans "$f" > /dev/null 2>&1
 }}
+
+cmd fasd_dir ${{
+   res="$(fasd -dl | grep -iv cache | fzf 2>/dev/tty)"
+   if [ -f "$res" ]; then
+      cmd="select"
+   elif [ -d "$res" ]; then
+      cmd="cd"
+   fi
+ lf -remote "send $id $cmd \"$res\""
+ }}
+
+cmd cp %{{
+  echo "Copy to:"
+  read ans
+  for file in "$fx"
+  do
+    cp $file $ans
+  done
+
+  lf -remote 'send reload'
 
 cmd broot_jump ${{
   f=$(mktemp)
@@ -149,6 +199,12 @@ cmd chmod %{{
   lf -remote 'send reload'
 }}
 
+cmd code %{{
+  code -a "$f"
+}}
+
+cmd trash $trash-put $fx
+
 cmd extract ${{
     set -f
     case $f in
@@ -160,6 +216,13 @@ cmd extract ${{
         *.7z) 7z x $f;;
     esac
 }}
+
+# dragon commands
+cmd dragon %dragon-drag-and-drop -a -x $fx
+cmd dragon-stay %dragon-drag-and-drop -a $fx
+cmd dragon-individual %dragon-drag-and-drop $fx
+cmd cpdragon %cpdragon
+cmd mvdragon %mvdragon
 
 
 ##############################
