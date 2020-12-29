@@ -1,11 +1,12 @@
 set fish_greeting
 
-neofetch
+pfetch
 
 
 alias mpv="devour mpv"
 alias lf="bash ~/.config/lf/lfrun"
-
+alias dolphin="devour dolphin"
+alias kate="devour kate"
 
 export LF_ICONS="\
 tw=:\
