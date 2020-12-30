@@ -1,6 +1,6 @@
 set previewer ~/.config/lf/preview
 set preview true
-set hidden true
+set hidden false
 set drawbox true
 set icons true
 set ignorecase true
@@ -55,6 +55,7 @@ map u           $view "$f"
 map .           set hidden!
 map <enter>     open
 map sh          shell
+map ov          nvim
 
 # dragon
 map dr dragon
@@ -201,6 +202,10 @@ cmd chmod %{{
 
 cmd code %{{
   code -a "$f"
+}}
+
+cmd nvim ${{
+  nvim "$f"
 }}
 
 cmd trash $trash-put $fx
