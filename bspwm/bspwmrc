@@ -49,9 +49,12 @@ bspc config presel_feedback_color	"#BA7C6F"
 
 
 #Single monitor
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+#bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 #Dual monitor
+bspc monitor DisplayPort-0 -d 3 4 5 6 7 8 9 10
+bspc monitor HDMI-A-0 -d 1 2
+
 #find out names with arandr or xrandr
 #bspc monitor DP-2 -d 1 2 3 4 5 6 7 8 9
 #bspc monitor LVDS1 -d 1 2 3 4
@@ -93,6 +96,12 @@ bspc rule -a Xfce4-terminal state=floating
 bspc rule -a Gnome-disks state=tiled
 bspc rule -a Xfce4-settings-manager state=tiled
 
+
+bspc rule -a gimp desktop='^6' follow=on
+bspc rule -a spotify desktop='^4' follow=on
+bspc rule -a discord desktop='^3' follow=on
+bspc rule -a lutris desktop='^5' follow=on
+bspc rule -a steam desktop='^5' follow=on
 #open applications on specific workspaces
 #bspc rule -a Firefox desktop='^1' follow=on
 #bspc rule -a Google-chrome desktop='^1' follow=on
