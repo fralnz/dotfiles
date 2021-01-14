@@ -75,8 +75,6 @@ bspc rule -a VirtualBox Machine state=fullscreen
 
 #Floating applications
 bspc rule -a Arandr state=floating
-bspc rule -a Arcolinux-tweak-tool.py state=floating
-bspc rule -a Arcolinux-welcome-app.py state=floating
 bspc rule -a feh state=floating
 #bspc rule -a mpv state=floating sticky=on
 #bspc rule -a Font-manager state=floating
@@ -97,11 +95,11 @@ bspc rule -a Gnome-disks state=tiled
 bspc rule -a Xfce4-settings-manager state=tiled
 
 
-bspc rule -a gimp desktop='^6' follow=on
-bspc rule -a spotify desktop='^4' follow=on
-bspc rule -a discord desktop='^3' follow=on
-bspc rule -a lutris desktop='^5' follow=on
-bspc rule -a steam desktop='^5' follow=on
+#bspc rule -a gimp desktop='^6' follow=on
+#bspc rule -a spotify desktop='^4' follow=on
+#bspc rule -a discord desktop='^3' follow=on
+#bspc rule -a lutris desktop='^5' follow=on
+#bspc rule -a steam desktop='^5' follow=on
 #open applications on specific workspaces
 #bspc rule -a Firefox desktop='^1' follow=on
 #bspc rule -a Google-chrome desktop='^1' follow=on

@@ -4,13 +4,21 @@
 
 # LAUNCHERS
 
-# firefox
-super + F1
-  firefox-developer-edition
+## firefox
+#super + F1
+#  firefox-developer-edition
 
-# firefox (incognito)
+## firefox (incognito)
+#super + alt + F1
+#  firefox-developer-edition --args -private-window
+
+# chromium
+super + F1
+  chromium
+
+# chromium (incognito)
 super + alt + F1
-  firefox-developer-edition --args -private-window
+  chromium --incognito
 
 # spotify
 super + F2
@@ -24,31 +32,33 @@ super + F3
 super + F2
   kmix
 
-# file manager: dolphin
+# discord
 super + d
-  dolphin
+  discord
 
-# file manager: spacefm
+# file manager: thunar
+super + f
+  thunar
+
+# steam
 super + s
-  spacefm
+  steam
 
 # lutris
 super + l
   lutris
 
-# steam
-super + F4
-  steam
+# gimp
+super + g
+  gimp
+
+# whatsapp
+super + w
+  whatsapp-nativefier
 
 # terminal emulator
 super + Return
   alacritty
-
-# arcolinux logout
-super + x
-  arcolinux-logout
-
-# program launcher
 
 # ---ROFI---
 
@@ -76,14 +86,24 @@ super + shift + x
 control + alt + r
   reboot
 
+# shut down
+control + alt + p
+  poweroff
 
 super + button1 + drag
   bspc node -t floating
 
+#
+# kde plasma hotkeys
+#
+
+# logout screen
+super + Escape
+  qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + Escape
   pkill -USR1 -x sxhkd
 
 #
@@ -95,8 +115,16 @@ super + alt + {q,r}
   bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
-  bspc node -{c,k}
+#super + {_,shift + }w
+#  bspc node -{c,k}
+
+# close
+super + q
+  bspc node -c
+
+#kill
+super + shift + q
+  bspc node -k
 
 # alternate between the tiled and monocle layout
 super + m
@@ -208,7 +236,7 @@ ctrl + shift + Escape
 
 #screeenshooter
 Print
-     spectacle
+     flameshot gui
 
 #Gnome-Screenshot
 ctrl + shift + Print
