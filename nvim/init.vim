@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'https://github.com/neoclide/coc.nvim'
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ap/vim-css-color'
 Plug 'https://github.com/frazrepo/vim-rainbow'
