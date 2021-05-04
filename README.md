@@ -7,6 +7,7 @@ My dotfiles
 ## Alacritty
 
 Place all the contents of the alacritty folder into *~/.config/alacritty/*
+
 Dependency: [SauceCodePro NerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip)
 
 ## bspwm
@@ -18,6 +19,10 @@ Place all the contents of the bspwm folder into *~/.config/bspwm/*
 <code>cd ~/.config/bspwm && chmod +x bspwmrc && chmod +x autostart.sh && chmod +x sxhkd/sxhkdrc</code>
 
 ### Dependencies
+
+#### bsp-layout
+
+Arch: <code>yay -S bsp-layout</code>
 
 #### Rofi
 
