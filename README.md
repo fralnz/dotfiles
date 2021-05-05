@@ -32,12 +32,22 @@ git: [kappa-launcher](https://github.com/jp1995/kappa-launcher), [rofi-emoji](ht
 
 ## nvim
 
-Place the contents of this folder in ~/.config/nvim/
+Place the content of the folder in ~/.config/nvim/
+
 Install [vim-plug](https://github.com/junegunn/vim-plug)
+
 Open nvim and <code>:PlugInstall</code>
+
 Install a [Nerd font](https://github.com/ryanoasis/nerd-fonts) for better usage (EX: [SauceCodePro NerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip))
 
 ## neofetch
 
 Place all the contents in ~/.config/neofetch
+
 Edit your shell config file (bash: ` ~/.bashrc`; zsh: ` ~/.zshrc`; fish: `~/.config/fish/config.fish`) and add <code>neofetch --source .config/neofetch/ascii-art.txt</code>
+
+## fish
+
+Place the content of the folder in ~/.config/fish/
+
+Install [ohmyfish](https://github.com/oh-my-fish/oh-my-fish#installation): <code>curl -L https://get.oh-my.fish | fish</code>
