@@ -33,6 +33,7 @@ git: [kappa-launcher](https://github.com/jp1995/kappa-launcher), [rofi-emoji](ht
 ## nvim
 
 Place the content of the folder in ~/.config/nvim/
+
 Install [vim-plug](https://github.com/junegunn/vim-plug)
 
 Open nvim and <code>:PlugInstall</code>
