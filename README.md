@@ -51,3 +51,7 @@ Edit your shell config file (bash: ` ~/.bashrc`; zsh: ` ~/.zshrc`; fish: `~/.con
 Place the content of the folder in ~/.config/fish/
 
 Install [ohmyfish](https://github.com/oh-my-fish/oh-my-fish#installation): <code>curl -L https://get.oh-my.fish | fish</code>
+
+## pacman
+
+From my dotfiles folder: <code>cp pacman/pacman.conf /etc/pacman.conf</code>
