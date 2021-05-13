@@ -5,8 +5,11 @@ pfetch
 
 alias mpv="devour mpv"
 alias lf="bash ~/.config/lf/lfrun"
-alias dolphin="devour dolphin"
-alias kate="devour kate"
+alias dl="cd ~/Downloads"
+alias cf="cd ~/.config"
+#alias dolphin="devour dolphin"
+#alias kate="devour kate"
+#alias chromium="cd /home/fra/Applications/ && ./ungoogled_chromium_90.0.4430.85-1.1_4c69b2e8c2e9fd04840f263518339252.AppImage"
 
 export LF_ICONS="\
 tw=:\
