@@ -1,3 +1,5 @@
+" GENERAL SETTINGS
+
 " set leader key
 
 syntax enable                           " Enables syntax highlighing
@@ -75,9 +77,22 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 cmap w!! w !sudo tee %
 
 
-" CSS colors
+" CSS COLORS SETINGS
 set termguicolors
 
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 
 colorscheme Monokai
+
+" STARTIFY SETTINGS
+let g:startify_custom_header = [
+      \ '  ███▄▄▄▄      ▄████████  ▄██████▄   ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   ',
+      \ '  ███▀▀▀██▄   ███    ███ ███    ███ ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ ',
+      \ '  ███   ███   ███    █▀  ███    ███ ███    ███ ███▌ ███   ███   ███ ',
+      \ '  ███   ███  ▄███▄▄▄     ███    ███ ███    ███ ███▌ ███   ███   ███ ',
+      \ '  ███   ███ ▀▀███▀▀▀     ███    ███ ███    ███ ███▌ ███   ███   ███ ',
+      \ '  ███   ███   ███    █▄  ███    ███ ███    ███ ███  ███   ███   ███ ',
+      \ '  ███   ███   ███    ███ ███    ███ ███    ███ ███  ███   ███   ███ ',
+      \ '   ▀█   █▀    ██████████  ▀██████▀   ▀██████▀  █▀    ▀█   ███   █▀  ',
+      \]
+
