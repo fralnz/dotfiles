@@ -55,3 +55,9 @@ Install [ohmyfish](https://github.com/oh-my-fish/oh-my-fish#installation): <code
 ## pacman
 
 From my dotfiles folder: <code>cp pacman/pacman.conf /etc/pacman.conf</code>
+
+## .Xresources
+
+Mostly urxvt configuration
+
+Dependencies: <code>yay -S urxvt-perls urxvt-resize-font-git</code>
