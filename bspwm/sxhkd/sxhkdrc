@@ -26,7 +26,7 @@ super + F2
 
 # discord
 super + F3
-  discord
+  qbittorrent
 
 # kmix volume manager
 super + F2
@@ -38,7 +38,7 @@ super + d
 
 # file manager: thunar
 super + f
-  thunar
+  dolphin
 
 # steam
 super + s
@@ -60,23 +60,33 @@ super + w
 super + Return
   alacritty
 
+# alternative terminal emulator
+super + shift + Return
+  urxvt -fade 0
+
+# RSS feed reader
+super + r
+  fluent-reader
+
+# ---DMENU---
+
+# dmenu_run
+super + p
+  dmenu_run -h 33
+
 # ---ROFI---
 
 # Rofi
-super + @space
+super + space
   rofi -show drun
 
 # Emoji
-super + shift + @space
+super + shift + space
   rofi -show emoji
 
 # Twitch
 super + alt + @space
   kpl
-
-# Twitch
-super + @space + t
-  rofi -show twitch
 
 # xkill
 super + shift + x
