@@ -13,6 +13,11 @@ nnoremap <M-h>    :vertical resize -2<CR>
 
 nnoremap <M-l>    :vertical resize +2<CR>
 
+" copy and paste to system clipboard
+
+map <C-c> "+y
+
+map <C-v> "+p
 
 
 " I hate escape more than anything else
@@ -84,6 +89,15 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 " Startify
-
+"
 nnoremap <C-q> :Startify<CR>
 
+" telescope
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+" vifm
+
+nnoremap <leader>vf :Vifm<CR>
