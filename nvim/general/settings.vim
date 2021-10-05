@@ -65,10 +65,18 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 
 
+" Auto center every time you enter insert mode
+autocmd InsertEnter * norm zz
+
 " CSS COLORS SETINGS
 set termguicolors
 
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+
+" emmet
+let g:user_emmet_mode='n'
+
+let g:user_emmet_leader_key=','
 
 colorscheme Monokai
 
@@ -105,3 +113,8 @@ let g:startify_custom_header = [
       \  '   ▀▀ █▪ ▀▀▀  ▀█▄▀▪. ▀  ▀▀▀▀▀  █▪▀▀▀',
       \]
 
+
+" Make Ranger replace netrw and be the file explorer
+let g:rnvimr_ex_enable = 1
+
+nmap <space>r :RnvimrToggle<CR>
