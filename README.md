@@ -61,3 +61,11 @@ From my dotfiles folder: <code>cp pacman/pacman.conf /etc/pacman.conf</code>
 Mostly urxvt configuration
 
 Dependencies: <code>yay -S urxvt-perls urxvt-resize-font-git</code>
+
+## mon 
+
+neofetch utility for Pokèmon
+
+Install: <code>chmod +x mon && sudo mv mon /usr/bin</code>
+
+Usage example: <code>mon pikachu</code>
