@@ -68,4 +68,5 @@ neofetch utility for Pokèmon
 
 Install: <code>chmod +x mon && sudo mv mon /usr/bin</code>
 
-Usage example: <code>mon pikachu</code>
+Usage example: <code>mon pikachu</code>.
+Alternatively, you can use the pokemon code insted of its name: <code>mon 25</code>
