@@ -46,6 +46,10 @@ Place all the contents in ~/.config/neofetch
 
 Edit your shell config file (bash: ` ~/.bashrc`; zsh: ` ~/.zshrc`; fish: `~/.config/fish/config.fish`) and add <code>neofetch --source .config/neofetch/ascii-art.txt</code>
 
+## catfetch
+
+Install needed fonts: <code>yay -S ttf-unifont bdf-unifont-extra</code>
+
 ## fish
 
 Place the content of the folder in ~/.config/fish/
