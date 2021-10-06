@@ -48,6 +48,8 @@ Edit your shell config file (bash: ` ~/.bashrc`; zsh: ` ~/.zshrc`; fish: `~/.con
 
 ## catfetch
 
+Install: <code>sudo mv catfetch /usr/bin/</code>
+
 Install needed fonts: <code>yay -S ttf-unifont bdf-unifont-extra</code>
 
 ## fish
