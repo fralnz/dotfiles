@@ -52,6 +52,8 @@ Install: <code>sudo mv kittyfetch /usr/bin/</code>
 
 Install needed fonts: <code>yay -S ttf-unifont bdf-unifont-extra</code>
 
+Dependencies: <code>xwininfo</code>
+
 ## fish
 
 Place the content of the folder in ~/.config/fish/
