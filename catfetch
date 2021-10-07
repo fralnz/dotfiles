@@ -11,8 +11,10 @@ kernel="$(uname -r | cut -d '-' -f1)"
 
 printf '%b' "
 welcome, ${user}
-  ／l、        • ${wm}
-（ﾟ､ ｡ ７      • ${shell}
- l、ﾞ ~ヽ      • ${resolution}
-  じしf_, )ノ  • ${kernel}
+
+   ／l、        • ${wm}
+ （ﾟ､ ｡ ７      • ${shell}
+  l、ﾞ ~ヽ      • ${resolution}
+   じしf_, )ノ  • ${kernel}
+
 "
