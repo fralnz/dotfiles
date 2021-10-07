@@ -14,7 +14,7 @@ if [ $h -lt 12 ]; then
 elif [ $h -lt 18 ]; then
   echo good afternoon, ${user}
 else
-  echo good evening, {$user}
+  echo good evening, ${user}
 fi
 
 # Print out the actual fetch
