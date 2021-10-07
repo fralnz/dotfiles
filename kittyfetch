@@ -12,9 +12,9 @@ h=`date +%H`
 if [ $h -lt 12 ]; then
   echo good morning, ${user} 
 elif [ $h -lt 18 ]; then
-  echo good afternoon,
+  echo good afternoon, ${user}
 else
-  echo good evening,
+  echo good evening, {$user}
 fi
 
 # Print out the actual fetch
