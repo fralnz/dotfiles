@@ -19,6 +19,8 @@ Plug 'godlygeek/tabular'                                                "better 
 Plug 'junegunn/fzf'                                                     "fzf support for vim
 Plug 'kevinhwang91/rnvimr'                                              "ranger file manager in vim
 Plug 'mattn/emmet-vim'                                                  "better html support
+Plug 'fatih/vim-go'                                                     "go support
+
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
