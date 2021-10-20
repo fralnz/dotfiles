@@ -1,16 +1,29 @@
 set fish_greeting
 
-pfetch
+set EDITOR "nvim"
 
+### pfetch
+#PF_INFO="ascii title os kernel pkgs memory" pfetch 
 
-alias mpv="devour mpv"
+### kittyfetch
+kittyfetch
+
+### aliases
 alias lf="bash ~/.config/lf/lfrun"
-alias dl="cd ~/Downloads"
-alias cf="cd ~/.config"
-#alias dolphin="devour dolphin"
-#alias kate="devour kate"
-#alias chromium="cd /home/fra/Applications/ && ./ungoogled_chromium_90.0.4430.85-1.1_4c69b2e8c2e9fd04840f263518339252.AppImage"
+alias pmm="sudo pmm"
+alias vifm "sh ~/.config/vifm/scripts/vifmrun"
 
+### abbreviations
+abbr exe "chmod +x"
+abbr dl "cd ~/Downloads/"
+abbr cf "cd ~/.config/"
+abbr sxiv "devour sxiv"
+abbr mpv "devour mpv"
+abbr urxvt "urxvt -fade 0"
+abbr ls "exa"
+abbr ani "ani-cli"
+
+### LF file manager configuration
 export LF_ICONS="\
 tw=:\
 st=:\
