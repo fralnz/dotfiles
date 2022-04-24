@@ -36,9 +36,9 @@ super + F2
 super + d
   discord
 
-# file manager: thunar
+# file manager: nemo
 super + f
-  dolphin
+  nemo
 
 # steam
 super + s
@@ -68,6 +68,10 @@ super + shift + Return
 super + r
   fluent-reader
 
+# color picker
+alt + c
+  cpicker
+
 # ---DMENU---
 
 # dmenu_run
@@ -78,7 +82,7 @@ super + p
 
 # Rofi
 super + space
-  rofi -show drun
+  rofi -show drun -show-icons
 
 # Emoji
 super + shift + space
@@ -87,6 +91,10 @@ super + shift + space
 # Twitch
 super + alt + @space
   kpl
+
+# aniwrapper
+super + a
+  aniwrapper
 
 # xkill
 super + shift + x
