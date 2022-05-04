@@ -92,6 +92,10 @@ super + shift + space
 super + alt + @space
   kpl
 
+# calendar
+super + alt + c
+  ~/.config/bspwm/rofi-calendar/rofi-calendar
+
 # aniwrapper
 super + a
   aniwrapper
