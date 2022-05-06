@@ -26,7 +26,7 @@ Arch: <code>yay -S bsp-layout</code>
 
 #### Rofi
 
-Arch: <code>yay -S rofi-emoji kappa-launcher-git</code>
+Arch: <code>yay -S rofi-emoji kappa-launcher-git pinenetry-rofi networkmanager-dmenu</code>
 
 git: [kappa-launcher](https://github.com/jp1995/kappa-launcher), [rofi-emoji](https://github.com/Mange/rofi-emoji)
 
