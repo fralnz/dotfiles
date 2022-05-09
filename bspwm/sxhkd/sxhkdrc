@@ -56,9 +56,13 @@ super + g
 super + w
   whatsapp-nativefier
 
+# nsxiv-url
+super + n
+  nsxiv-clip
+
 # terminal emulator
 super + Return
-  alacritty
+  alacritty -e fish
 
 # alternative terminal emulator
 super + shift + Return
@@ -72,11 +76,15 @@ super + r
 alt + c
   cpicker
 
+# mpv clipboard
+super + m
+  mpv "$(xclip -o)"
+
 # ---DMENU---
 
 # dmenu_run
 super + p
-  dmenu_run -h 33
+  dmenu_run
 
 # ---ROFI---
 
