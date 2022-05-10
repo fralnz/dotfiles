@@ -1,0 +1,71 @@
+{
+  "squares": [
+    { "name": "media",
+      "color": "red",
+      "links": [
+        { "name": "Youtube", "url": "https://youtube.com" },
+        { "name": "Instagram", "url": "https://instagram.com/?theme=dark" },
+        { "name": "Reddit", "url": "https://reddit.com/" },
+        { "name": "Gmail", "url": "https://gmail.com" }
+      ]
+    },
+    { "name": "school",
+      "color": "#26A69A",
+      "links": [
+        { "name": "Unimia", "url": "http://unimia.unimi.it/" },
+        { "name": "Ariel", "url": "https://ariel.unimi.it/" },
+        { "name": "Github", "url": "https://github.com" }
+      ]
+    },
+    { "name": "reddit",
+      "color": "#CDDC39",
+      "links": [
+        { "name": "r/startpages", "url": "https://reddit.com/r/startpages/" },
+        { "name": "r/pixelart", "url": "https://www.reddit.com/r/PixelArt/" },
+        { "name": "r/unixporn", "url": "https://www.reddit.com/r/unixporn/" },
+        { "name": "r/mk", "url": "https://www.reddit.com/r/MechanicalKeyboards/" }
+      ]
+    },
+    {
+      "name": "others",
+      "color": "#8BC34A",
+      "links": [
+        {"name": "Material Colors", "url": "http://materialuicolors.co/"},
+        {"name": "Waifu2x", "url": "http://waifu2x.udp.jp/"},
+        {"name": "MonkeyType", "url": "https://monkeytype.com/"},
+        {"name": "rarbg", "url": "http://rarbg.to"}
+      ]
+    }
+  ],
+  "title": "startpage",
+  "searchEngine":"DuckDuckGo",
+  "user": "Fra",
+  "disableMessage": false,
+  "disableDate": false,
+  "disableSearchBar": false,
+  "disable24Hour": false,
+  "disableWeather": true,
+  "timeZone": "Europe/Rome",
+  "weatherConf": {
+    "location": "Milano Italy",
+    "unit": "cel"
+  },
+  "settingsIcon": false,
+  "style": {
+    "backgroundColor": "#212121",
+    "messageColor": "#fff",
+    "dateColor": "#d9d9d9",
+    "lineColor": "#fff",
+    "weatherColor": "#d9d9d9",
+    "searchColor": "#fff",
+    "searchBackgroundColor": "#2e2e2e",
+    "squareColor": "#9e9e9e",
+    "squareBackgroundColor": "#2e2e2e",
+    "autocompleteHighlightBackgroundColor": "#3B3B3B"
+  },
+  "quickLinks": {
+    "r": "https://reddit.com",
+    "g": "https://github.com",
+    "y": "https://youtube.com"
+  }
+}
