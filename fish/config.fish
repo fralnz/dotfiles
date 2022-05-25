@@ -10,18 +10,21 @@ kittyfetch
 
 ### aliases
 alias lf="bash ~/.config/lf/lfrun"
-alias pmm="sudo pmm"
-alias vifm "sh ~/.config/vifm/scripts/vifmrun"
+alias vifm="sh ~/.config/vifm/scripts/vifmrun"
+alias res="ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0"
+alias ls="exa --icons --group-directories-first"
 
 ### abbreviations
 abbr exe "chmod +x"
 abbr dl "cd ~/Downloads/"
 abbr cf "cd ~/.config/"
-abbr sxiv "devour sxiv"
+abbr sxiv "devour nsxiv"
+abbr sxiv-web "devour nsxiv-url"
 abbr mpv "devour mpv"
 abbr urxvt "urxvt -fade 0"
-abbr ls "exa"
 abbr ani "ani-cli"
+abbr logisim "devour _JAVA_AWT_WM_NONREPARENTING=1 logisim"
+abbr dd "dragon-drop"
 
 ### LF file manager configuration
 export LF_ICONS="\
