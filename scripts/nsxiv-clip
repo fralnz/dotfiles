@@ -1,2 +1,0 @@
-#!/bin/bash
-nsxiv-url "$(xclip -o)"
