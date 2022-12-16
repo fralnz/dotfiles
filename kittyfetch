@@ -1,0 +1,28 @@
+#!/bin/bash
+
+## Get the fetch info 
+user="${USER}"
+shell="$(basename ${SHELL})"
+wm="$(xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}') -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")"
+resolution="$(xwininfo -root | grep geometry | awk '{print $2}' | cut -d + -f1)"
+kernel="$(uname -r | cut -d '-' -f1)"
+
+h=`date +%H`
+
+if [ $h -lt 12 ]; then
+  echo good morning, ${user}  
+elif [ $h -lt 18 ]; then
+  echo good afternoon, ${user}  
+else
+  echo good evening, ${user}  
+fi
+
+# Print out the actual fetch
+
+printf "
+   ／l、        • ${wm}
+ （ﾟ､ ｡ ７      • ${shell}
+  l、ﾞ ~ヽ      • ${resolution}
+   じしf_, )ノ  • ${kernel}
+
+ "
