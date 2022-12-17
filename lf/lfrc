@@ -47,18 +47,39 @@ cmd open ${{
     esac
 }}
 
+cmd dragon ${{
+  dragon-drop "$f" &
+}}
+
+cmd openwith %{{
+  printf "Open with: "
+  read ans
+  $ans "$f" &
+}}
+
+cmd edit ${{
+  alacritty -e nvim "$f" &
+}}
+
+cmd sudoedit ${{
+  alacritty -e sudo nvim "$f" &
+}}
+
 # CUSTOM FUNCTIONS BINDINGS
 map md mkdir
 map mf mkfile
 map me mkexe
 
-map e extract
+map 7 extract
+map dd dragon
 
 # DELETE BASIC FUNCTIONS
 map m
+map d
 
 # BASIC FUNCTIONS BINDINGS
 map o open
+map O openwith
 map <enter> open
 map <delete> delete
 map y copy
@@ -66,6 +87,8 @@ map d cut
 map p paste
 map R reload
 map <esc> clear
+map e edit
+map E sudoedit
 
 #MOVEMENT
 map gd cd ~/Downloads
