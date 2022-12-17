@@ -1,0 +1,74 @@
+# UEBERZUG SETTINGS
+set previewer lf-ueberzug-previewer
+set cleaner lf-ueberzug-cleaner
+
+# BASIC SETTINGS
+set hidden true
+set ignorecase true
+set icons true
+set drawbox true
+
+# CUSTOM FUNCTIONS
+cmd mkdir %{{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile %{{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+cmd mkexe ${{
+  for file in "$fx"
+  do
+    chmod +x $file
+  done
+  lf -remote 'send reload'
+}}
+
+cmd extract ${{
+  alacritty -e 7z x "$f" && lf -remote 'send reload' &
+}}
+
+cmd openfile %{{
+  case "$f" in
+    *.mp4) mpv "$f" & ;;
+    *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" &;;
+    esac
+}}
+
+# CUSTOM FUNCTIONS BINDINGS
+map md mkdir
+map mf mkfile
+map me mkexe
+
+map e extract
+
+# DELETE BASIC FUNCTIONS
+map m
+
+# BASIC FUNCTIONS BINDINGS
+map o open
+map <enter> open
+map <delete> delete
+map y copy
+map d cut
+map p paste
+map R reload
+map <esc> clear
+
+#MOVEMENT
+map gd cd ~/Downloads
+map gD cd ~/Documents
+map gp cd ~/Pictures
+map gc cd ~/.config
