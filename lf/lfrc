@@ -65,6 +65,12 @@ cmd sudoedit ${{
   alacritty -e sudo nvim "$f" &
 }}
 
+cmd scale %{{
+  printf "Scale ratio: "
+  read ans
+  alacritty -e waifu2x-converter-cpp --scale-ratio $ans -i "$f" -o scaled.png && lf -remote 'send reload' &
+}}
+
 # CUSTOM FUNCTIONS BINDINGS
 map md mkdir
 map mf mkfile
@@ -95,3 +101,6 @@ map gd cd ~/Downloads
 map gD cd ~/Documents
 map gp cd ~/Pictures
 map gc cd ~/.config
+map gs cd /media/STORAGE
+map gw cd /media/windows
+map gv cd /media/STORAGE/Media/Videos
