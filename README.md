@@ -30,7 +30,9 @@ Install a [Nerd font](https://github.com/ryanoasis/nerd-fonts) for better usage 
 
 ## lf
 
-Symlink lf-ueberzug to /usr/local/bin and alias lf as lf-ueberzug
+Symlink lf-ueberzug to /usr/local/bin and alias lf as lf-ueberzug (credits: [lf-ueberzug](https://github.com/slavistan/lf-gadgets/tree/master/lf-ueberzug))
+
+<code>sudo ln -s ~/.config/lf/lf-ueberzug /usr/local/bin</code>
 
 ## kittyfetch
 
@@ -39,6 +41,12 @@ Install: <code>sudo mv kittyfetch /usr/bin/</code>
 Install needed fonts: <code>yay -S ttf-unifont bdf-unifont-extra</code>
 
 Dependencies: <code>xwininfo</code>
+
+## zsh
+
+Place <code>.zshrc</code> in $HOME and the `zsh` folder in `.config`
+
+Dependencies: `zsh-syntax-highlighting zsh-history-substring-search zsh-autosuggestions`
 
 ## fish
 
