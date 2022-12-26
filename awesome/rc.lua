@@ -361,15 +361,21 @@ globalkeys = gears.table.join(
 
     -- File Manager
     awful.key({ modkey },            "f",     function ()
-    awful.util.spawn("nemo")
+    awful.util.spawn("dolphin")
     end,
               {description = "File manager", group = "apps"}),
 
     -- Screenshot
-    awful.key({ altkey },            "s",      function ()
-    awful.util.spawn("flameshot gui")
+    awful.key({},            "Print",         function ()
+    awful.util.spawn_with_shell("maim -s | xclip -selection clipboard -t image/png -i")
     end,
               {description = "screenshot", group = "apps"}),
+
+    -- Alacritty font switch
+    awful.key({ altkey },     "f",            function ()
+    awful.util.spawn_with_shell("~/.config/alacritty/switchfont.sh")
+    end,
+              {description = "Switch terminal font", group = "terminal"}),
 
     -- Color Picker
     awful.key({ altkey },            "c",     function ()
@@ -608,7 +614,7 @@ beautiful.useless_gap = 5
 
 -- AUTOSTART
 awful.spawn.with_shell("xrandr --output DisplayPort-0 --primary --mode 2560x1440 -r 144 --pos 1920x0 --rotate normal --set TearFree on --output HDMI-A-0 --mode 1920x1080 --pos 0x360 --rotate normal --set TearFree on")
-awful.spawn.with_shell("picom --experimental-backend")
-awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("/usr/libexec/polkit-gnome-authentication-agent-1")
+awful.spawn.with_shell("xrdb ~/.Xresources")
 
