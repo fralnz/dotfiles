@@ -41,6 +41,9 @@ do
         in_error = false
     end)
 end
+
+naughty.config.defaults.icon_size = 48  -- Sets notifications to be small
+
 -- }}}
 
 -- {{{ Variable definitions
@@ -51,7 +54,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "alacritty -e zsh"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -214,10 +217,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+--            mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+--            s.mylayoutbox,
         },
     }
 end)
@@ -254,8 +257,8 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "m", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
+--    awful.key({ modkey,           }, "m", function () mymainmenu:show() end,
+--              {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -361,7 +364,7 @@ globalkeys = gears.table.join(
 
     -- File Manager
     awful.key({ modkey },            "f",     function ()
-    awful.util.spawn("dolphin")
+    awful.util.spawn("pcmanfm-qt")
     end,
               {description = "File manager", group = "apps"}),
 
