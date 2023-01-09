@@ -1,13 +1,9 @@
-# Lines configured by zsh-newuser-install
+# My zsh config
 HISTFILE=~/.cache/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
 unsetopt beep
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '/home/fra/.zshrc'
-
-# End of lines added by compinstall
 
 # Custom Prompt
 PROMPT=" %B%F{cyan}%1~ %f%b"
@@ -30,6 +26,7 @@ abbrev-alias ser="xbps-query -Rs"
 abbrev-alias exeabbr "exe" "chmod +x"
 abbrev-alias reboot="loginctl reboot"
 abbrev-alias poweroff="loginctl poweroff"
+abbrev-alias l="ls"
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
@@ -39,3 +36,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 # History substing search bindings
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey "^[[3~" delete-char   # True delete
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^H"  backward-kill-word
