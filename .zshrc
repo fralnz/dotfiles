@@ -13,6 +13,7 @@ RPROMPT="%F{241}%T"
 source ~/.config/zsh/lf.zsh
 source ~/.config/zsh/abbreviations.zsh
 source ~/.config/zsh/tabcomplete.zsh
+source ~/.config/zsh/autopair.zsh
 
 # Alias
 alias ls="exa --icons --group-directories-first"
@@ -23,7 +24,7 @@ abbrev-alias in="sudo xbps-install"
 abbrev-alias up="sudo xbps-install -Syu"
 abbrev-alias rem="sudo xbps-remove -R"
 abbrev-alias ser="xbps-query -Rs"
-abbrev-alias exeabbr "exe" "chmod +x"
+abbrev-alias exe="chmod +x"
 abbrev-alias reboot="loginctl reboot"
 abbrev-alias poweroff="loginctl poweroff"
 abbrev-alias l="ls"
