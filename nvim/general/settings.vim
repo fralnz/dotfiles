@@ -78,7 +78,7 @@ let g:user_emmet_mode='n'
 
 let g:user_emmet_leader_key=','
 
-colorscheme Monokai
+colorscheme kanagawa
 
 " STARTIFY SETTINGS
 

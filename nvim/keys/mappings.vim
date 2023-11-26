@@ -14,10 +14,10 @@ nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
 " copy and paste to system clipboard
-
-map <C-c> "+y
-
-map <C-v> "+p
+"
+"map <C-c> "+y
+"
+"map <C-v> "+p
 
 
 " I hate escape more than anything else
