@@ -50,7 +50,7 @@ naughty.config.defaults.icon_size = 48  -- Sets notifications to be small
 -- Themes define colours, icons, font and wallpapers.
 -- THEME
 --beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "powerarrow-darker")
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "pitchblack")
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
@@ -236,7 +236,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "y",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -244,6 +244,8 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+
+    awful.key({ modkey,           }, "s",      awful.placement.centered),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -326,6 +328,18 @@ globalkeys = gears.table.join(
     end,
               {description = "rofi", group = "launcher"}),
 
+    -- Rofi Emoji
+    awful.key({ modkey, "Shift" },   "space",     function ()
+    awful.util.spawn("rofi -show emoji")
+    end,
+              {description = "rofi-emoji", group = "launcher"}),
+
+    -- Rofi Calculator
+    awful.key({ modkey, altkey },    "space",     function ()
+    awful.util.spawn("rofi -show calc")
+    end,
+              {description = "rofi-calc", group = "launcher"}),
+
     -- dmenu
     awful.key({ modkey },            "r",     function ()
     awful.util.spawn("dmenu_run")
@@ -364,7 +378,7 @@ globalkeys = gears.table.join(
 
     -- File Manager
     awful.key({ modkey },            "f",     function ()
-    awful.util.spawn("pcmanfm-qt")
+    awful.util.spawn("pcmanfm")
     end,
               {description = "File manager", group = "apps"}),
 
@@ -620,4 +634,5 @@ awful.spawn.with_shell("xrandr --output DisplayPort-0 --primary --mode 2560x1440
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("/usr/libexec/polkit-gnome-authentication-agent-1")
 awful.spawn.with_shell("xrdb ~/.Xresources")
+awful.spawn.with_shell("xbindkeys -n -v -f ~/.xbindkeysrc")
 
