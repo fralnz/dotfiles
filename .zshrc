@@ -14,25 +14,23 @@ source ~/.config/zsh/lf.zsh
 source ~/.config/zsh/abbreviations.zsh
 source ~/.config/zsh/tabcomplete.zsh
 source ~/.config/zsh/autopair.zsh
+source ~/.config/zsh/history-substring-search.zsh
+source ~/.config/zsh/syntax-highlighting.zsh
+source ~/.config/zsh/autosuggestions.zsh
+source ~/.config/zsh/git.zsh
 
 # Alias
 alias ls="exa --icons --group-directories-first"
 alias lf="lf-ueberzug"
 
 # Abbreviations
-abbrev-alias in="sudo xbps-install"
-abbrev-alias up="sudo xbps-install -Syu"
-abbrev-alias rem="sudo xbps-remove -R"
-abbrev-alias ser="xbps-query -Rs"
+abbrev-alias in="sudo zypper in"
+abbrev-alias up="sudo zypper update"
+abbrev-alias rem="sudo zypper rm"
+abbrev-alias ser="zypper search"
 abbrev-alias exe="chmod +x"
-abbrev-alias reboot="loginctl reboot"
-abbrev-alias poweroff="loginctl poweroff"
 abbrev-alias l="ls"
-
-# Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+abbrev-alias d="cd ~/Downloads/"
 
 # History substing search bindings
 bindkey '^[[A' history-substring-search-up
