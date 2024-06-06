@@ -1,0 +1,332 @@
+#
+# wm independent hotkeys
+#:w
+
+# LAUNCHERS
+
+## firefox
+#super + F1
+#  firefox-developer-edition
+
+## firefox (incognito)
+#super + alt + F1
+#  firefox-developer-edition --args -private-window
+
+# chromium
+super + F1
+  chromium
+
+# chromium (incognito)
+super + alt + F1
+  chromium --incognito
+
+# spotify
+super + F2
+  spotify
+
+# discord
+super + F3
+  qbittorrent
+
+# kmix volume manager
+super + F2
+  kmix
+
+# discord
+super + d
+  discord
+
+# file manager: nemo
+super + f
+  nemo
+
+# steam
+super + s
+  steam
+
+# lutris
+super + l
+  lutris
+
+# gimp
+super + g
+  gimp
+
+# whatsapp
+super + w
+  whatsapp-nativefier
+
+# nsxiv-url
+super + n
+  nsxiv-clip
+
+# terminal emulator
+super + Return
+  alacritty -e fish
+
+# alternative terminal emulator
+super + shift + Return
+  urxvt -fade 0
+
+# RSS feed reader
+super + r
+  fluent-reader
+
+# color picker
+alt + c
+  cpicker
+
+# mpv clipboard
+super + m
+  mpv "$(xclip -o)"
+
+# ---DMENU---
+
+# dmenu_run
+super + p
+  dmenu_run
+
+# ---ROFI---
+
+# Rofi
+super + space
+  rofi -show drun -show-icons
+
+# Emoji
+super + shift + space
+  rofi -show emoji
+
+# Twitch
+super + alt + @space
+  kpl
+
+# calendar
+super + alt + c
+  ~/.config/bspwm/rofi-calendar/rofi-calendar
+
+# aniwrapper
+super + a
+  aniwrapper
+
+# xkill
+super + shift + x
+  xkill
+
+# reboot
+control + alt + r
+  reboot
+
+# shut down
+control + alt + p
+  poweroff
+
+super + button1 + drag
+  bspc node -t floating
+
+#
+# kde plasma hotkeys
+#
+
+# logout screen
+super + Escape
+  qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+
+# make sxhkd reload its configuration files:
+super + shift + Escape
+  pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+  bspc {quit,wm -r}
+
+# close and kill
+#super + {_,shift + }w
+#  bspc node -{c,k}
+
+# close
+super + q
+  bspc node -c
+
+#kill
+super + shift + q
+  bspc node -k
+
+# alternate between the tiled and monocle layout
+super + m
+  bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+  bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + g
+  bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state
+super + shift + {t,alt + t,s,f}
+  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+  bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+  bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+  bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+  bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+  bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+  bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+  bspc wm -h off; \
+    bspc node {older,newer} -f; \
+      bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+  bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+  bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+  bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+  bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+  bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+  bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+  bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+  bspc node -v {-20 0,0 20,0 -20,20 0}
+
+  
+#################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
+#Xcfe4-TaskManager
+ctrl + shift + Escape
+    xfce4-taskmanager
+
+
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#screeenshooter
+Print
+     flameshot gui
+
+#Gnome-Screenshot
+ctrl + shift + Print
+     gnome-screenshot -i  
+
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#Playerctl works for Pragha, Spotify and others
+#Delete the line for playerctl if you want to use mpc
+#and replace it with the corresponding code
+#mpc works for e.g.ncmpcpp
+#mpc toggle
+#mpc next
+#mpc prev
+#mpc stop
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+#########################
+#        POLYBAR        #
+#########################
+
+#Hide polybar
+super + y
+    polybar-msg cmd toggle
+    
