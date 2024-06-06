@@ -4,6 +4,10 @@ My dotfiles
 
 ## 
 
+## Hyprland
+
+My hyprland config heavily relies on [ags](https://aylur.github.io/ags-docs/config/installation/).
+
 ## Alacritty
 
 Place all the contents of the alacritty folder into *~/.config/alacritty/*
